@@ -21,3 +21,11 @@ function remove(arr, val) {
         return el !== val;
     })
 }
+
+let usernames = [];
+
+let nameInput = document.getElementById('nameInput');
+
+function submitForm() {
+    usernames.push(nameInput.value);
+}

@@ -34,3 +34,21 @@ describe('remove tests', function () {
         expect(remove([1,2,3,4,5,6], 6)).not.toContain(6);
     })
 })
+
+describe('submitForm() tests', () => {
+    it('saves input val to usernames array', () => {
+        input.value = 'chickenGal';
+        submitForm();
+        expect(usernames.length).toEqual(1)
+        expect(usernames).toContain('chickenGals')
+    })
+    it('saves long usernames', () => {
+        input.value = 'I am a panda luvr 567';
+        submitForm();
+        expect(usernames.length).toEqual(1);
+    })
+})
+afterEach(function () {
+    input.value = '';
+    usernames = [];
+})
