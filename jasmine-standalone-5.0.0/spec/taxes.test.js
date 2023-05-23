@@ -19,18 +19,18 @@ describe('calculateTaxes tests', function () {
 describe('removeDupes tests', function() {
     it('should remove duplicates from an array', function(){
         expect(removeDupes([1,1,2,2,3,4]).toEqual([1,2,3,4]));
-        expect(removeDupes([1,2,3])).toEqual([1,2,3]);
-        expect(removeDupes([1,2,3])).toBeInstanceOf(Array);
+        expect(removeDupes([1,2,3]).toEqual([1,2,3]));
+        expect(removeDupes([1,2,3]).toBeInstanceOf(Array));
     })
     
     it('should remove duplicates from a string', function(){
-        expect(removeDupes('hello')).toEqual('helo');
-        expect(removeDupes('hello')).toBeInstanceOf(String);
+        expect(removeDupes('hello').toEqual('helo'));
+        expect(removeDupes('hello').toBeInstanceOf(String));
     })
 })
 
 describe('remove tests', function () {
     it('should remove value from array', function(){
-        expect(remove([1,2,3,4,5,6], 6)).not.toContain(6);
+        expect(remove([1,2,3,4,5,6], 6).not.toContain(6));
     })
 })
