@@ -37,18 +37,18 @@ describe('remove tests', function () {
 
 describe('submitForm() tests', () => {
     it('saves input val to usernames array', () => {
-        let input = 'chickenGal';
+        let value = 'chickenGal';
         submitForm();
         expect(usernames.length).toEqual(1)
         expect(usernames).toContain('chickenGals')
     })
     it('saves long usernames', () => {
-        let input = 'I am a panda luvr 567';
+        let value = 'I am a panda luvr 567';
         submitForm();
         expect(usernames.length).toEqual(1);
     })
 })
 afterEach(function () {
-    let input = '';
+    let value = '';
     usernames = [];
 })
