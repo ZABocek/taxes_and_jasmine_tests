@@ -15,3 +15,9 @@ function removeDupes(values) {
     if(typeof values === 'string') return arr.join('');
     return arr;
 }
+
+function remove(arr, val) {
+    return arr.filter((el) => {
+        return el !== val;
+    })
+}
